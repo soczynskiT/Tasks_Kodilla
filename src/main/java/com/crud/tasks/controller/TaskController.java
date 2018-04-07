@@ -23,17 +23,14 @@ public class TaskController {
 
     @DeleteMapping(value = "deleteTask")
     public void deleteTask(String taskId) {
-
     }
 
     @PutMapping(value = "updateTask")
     public TaskDto updateTask(TaskDto taskDto) {
-        return new TaskDto((long) 1, "edited_title", "test_content");
-
+        return new TaskDto((long) 2, "test_title", "test_content");
     }
 
     @PostMapping(value = "createTask")
     public void createTask(TaskDto taskDto) {
-
     }
 }
