@@ -21,8 +21,9 @@ public class TaskController {
 
 
     @GetMapping(value = "getTasks")
-    public List<Task> getTasks() {
-        return new ArrayList<>();
+    public List<TaskDto> getTasks() {
+        System.out.println(service.getAllTasks());
+        return taskMapper.mapToTaskDtoList(service.getAllTasks());
     }
 
     @GetMapping(value = "getTask")
