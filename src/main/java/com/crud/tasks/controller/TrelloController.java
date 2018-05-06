@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/v1/trello")
@@ -22,7 +23,7 @@ public class TrelloController {
         List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
 
         trelloBoards.stream()
-                .filter(tb -> tb.getId() != null && tb.getName() != null)
+                .filter(tb -> Objects.nonNull(tb.getId()) && Objects.nonNull(tb.getName()))
                 .filter(tb -> tb.getName().toUpperCase().contains("KODILLA"))
                 .forEach(tb -> {
 
