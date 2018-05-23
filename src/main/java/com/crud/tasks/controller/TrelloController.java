@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/v1/trello")
 public class TrelloController {
@@ -16,13 +17,13 @@ public class TrelloController {
     @Autowired
     private TrelloClient trelloClient;
 
-    @GetMapping("getTrelloBoards")
+    @GetMapping("/getTrelloBoards")
     public List<TrelloBoardDto> getTrelloBoards() {
         return trelloClient.getTrelloBoards();
 
     }
 
-    @PostMapping("createTrelloCard")
+    @PostMapping("/createTrelloCard")
     public CreatedTrelloCard createTrelloCard(@RequestBody TrelloCardDto trelloCardDto) {
         return trelloClient.createNewCard(trelloCardDto);
     }

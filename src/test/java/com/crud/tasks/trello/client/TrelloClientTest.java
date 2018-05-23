@@ -93,7 +93,7 @@ public class TrelloClientTest {
     }
 
     @Test
-    public void shouldReturnEmptyList() throws URISyntaxException{
+    public void shouldReturnEmptyList() throws URISyntaxException {
         //Given
         final TrelloBoardDto[] trelloBoards = new TrelloBoardDto[1];
         final URI uri = new URI("http://test.com/members/tomaszsoczynski/boards?key=test&token=test&fields=name,id&lists=all");
