@@ -24,12 +24,12 @@ public class SimpleEmailService {
         try {
             javaMailSender.send(createMailMessage(mail));
             LOGGER.info("Email has been sent.");
-        } catch (MailException e){
+        } catch (MailException e) {
             LOGGER.error("Failed to process email sending: ", e.getMessage(), e);
         }
     }
 
-    public SimpleMailMessage createMailMessage(final Mail mail) {
+    private SimpleMailMessage createMailMessage(final Mail mail) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(mail.getMailTo());
         mailMessage.setSubject(mail.getSubject());
