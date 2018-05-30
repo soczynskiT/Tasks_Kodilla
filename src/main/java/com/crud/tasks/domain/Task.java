@@ -20,4 +20,10 @@ public class Task {
 
     @Column(name = "description")
     private String content;
+
+    //For tests only
+    public Task(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }

@@ -22,7 +22,7 @@ import java.util.List;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class TrelloClientTest {
+public class TrelloClientTestSuite {
 
     @InjectMocks
     private TrelloClient trelloClient;

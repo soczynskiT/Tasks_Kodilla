@@ -1,6 +1,5 @@
 package com.crud.tasks;
 
-import com.crud.tasks.domain.Task;
 import com.crud.tasks.repository.TaskRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
