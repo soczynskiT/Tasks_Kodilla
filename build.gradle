@@ -33,6 +33,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
 
     compile('com.google.code.gson:gson:2.8.2')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.8.0'
     compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.8.0'

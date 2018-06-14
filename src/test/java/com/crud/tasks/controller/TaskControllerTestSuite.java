@@ -126,7 +126,9 @@ public class TaskControllerTestSuite {
                 .content(jsonContent))
                 .andExpect(jsonPath("$.id", is(1)))
                 .andExpect(jsonPath("$.title", is("title")))
-                .andExpect(jsonPath("$.content", is("updated_content")));
+                .andExpect(jsonPath("$.content", is("updated_content")))
+                .andExpect(status().isOk());
+
 
     }
 
