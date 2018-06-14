@@ -20,7 +20,7 @@ public class SimpleEmailService {
     @Autowired
     MailCreatorService mailCreatorService;
 
-    public void send(final Mail mail) {
+    void send(final Mail mail) {
         LOGGER.info("Starting email preparation...");
         try {
             javaMailSender.send(createMimeMessage(mail));
@@ -30,7 +30,7 @@ public class SimpleEmailService {
         }
     }
 
-    private MimeMessagePreparator createMimeMessage(final Mail mail) {
+    MimeMessagePreparator createMimeMessage(final Mail mail) {
         return mimeMessage -> {
             MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
             messageHelper.setTo(mail.getMailTo());
